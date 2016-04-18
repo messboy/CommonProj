@@ -1,0 +1,12 @@
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\Dao.dll.config
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\Dao.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\Dao.pdb
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\EntityFramework.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\EntityFramework.xml
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\obj\Debug\Dao.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\obj\Debug\Dao.pdb
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Dao\obj\Debug\Dao.csprojResolveAssemblyReference.cache

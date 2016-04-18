@@ -1,0 +1,49 @@
+
+1.加入nuget (僅列出主要)
+	autofac
+	automapper
+	NLOG相關
+	NetJson
+
+2.建立DI環境
+	App_Start加入autofac,automapper,nlogConfig並至global.asax加入初始化
+
+
+3.建立獨立專案 Utility.Extensions
+	NLOG相關
+
+4.設定webconfig autofac
+	<configSections>
+    <section name="autofac" type="Autofac.Configuration.SectionHandler, Autofac.Configuration" />
+	 </configSections>
+
+	<autofac>
+		<modules>
+		...
+		</modules>
+		<components>
+		  <component type="Utility.Extensions.NLOG.LogRequestAttribute, Utility.Extensions" service="Utility.Extensions.NLOG.LogRequestAttribute, Utility.Extensions" />
+		  <component type="Utility.Extensions.ErrorHandler.ExceptionHandler, Utility.Extensions" service="Utility.Extensions.ErrorHandler.ExceptionHandler, Utility.Extensions" />
+		</components>
+	</autofac>
+
+5.自制 mvc api : 回傳json 
+	Utility建立JsonNetController
+	automapper ＆ BLL ＆ DAO
+
+
+6.基本filter
+	ValidateModelAttribute
+
+
+
+
+.權限驗證
+	自訂權限驗證
+	修正webconfig使用自訂
+	<membership defaultProvider="CustomMembershipProvider">
+      <providers>
+        <clear />
+        <add name="CustomMembershipProvider" type="Backend.Security.CustomMembershipProvider" cacheTimeoutInMinutes="30" />
+      </providers>
+    </membership>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CommonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="64" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Creator" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="LastLogonIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogonTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Menu" Relationship="Self.AdminMenuRel" FromRole="Admin" ToRole="Menu" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CategoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="ModifiedTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="IsPublish" Type="Boolean" />
+    <NavigationProperty Name="FileUpload" Relationship="Self.FK_FileUpload_Category" FromRole="Category" ToRole="FileUpload" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ContentID" />
+    </Key>
+    <Property Name="ContentID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContentType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Indentifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Rights" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ResourceLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CoverImage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsOuterCoverImage" Type="Boolean" Nullable="false" />
+    <Property Name="ResourceType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GradeLevel" Type="Byte" Nullable="false" />
+    <Property Name="RelatedReSource" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="Publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsPublish" Type="Boolean" Nullable="false" />
+    <Property Name="ClickCount" Type="Int64" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="FileUpload" Relationship="Self.FK_FileUpload_Content" FromRole="Content" ToRole="FileUpload" />
+    <NavigationProperty Name="Keyword" Relationship="Self.KeyRel" FromRole="Content" ToRole="Keyword" />
+  </EntityType>
+  <EntityType Name="FileUpload">
+    <Key>
+      <PropertyRef Name="ItemOID" />
+    </Key>
+    <Property Name="ItemOID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ContentID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="Museum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FunctionOID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Bit" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ClickCount" Type="Int32" Nullable="false" />
+    <Property Name="CoverImage" Type="Boolean" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="StateMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <Property Name="Creator" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_FileUpload_Category" FromRole="FileUpload" ToRole="Category" />
+    <NavigationProperty Name="Content" Relationship="Self.FK_FileUpload_Content" FromRole="FileUpload" ToRole="Content" />
+  </EntityType>
+  <EntityType Name="Introduction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MuseumName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Museum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OpenTimeIntro" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="Traffic" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CoverImage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsOuterCoverImage" Type="Boolean" Nullable="false" />
+    <Property Name="Website" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Facebook" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Ticket" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPublish" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Keyword">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Content" Relationship="Self.KeyRel" FromRole="Keyword" ToRole="Content" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MemberName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NickName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemberType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Byte" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LatestLogin" Type="DateTime" Precision="3" />
+    <Property Name="LoginCount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="IsParent" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Admin" Relationship="Self.AdminMenuRel" FromRole="Menu" ToRole="Admin" />
+  </EntityType>
+  <Association Name="FK_FileUpload_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="FileUpload" Type="Self.FileUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FileUpload">
+        <PropertyRef Name="FunctionOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileUpload_Content">
+    <End Role="Content" Type="Self.Content" Multiplicity="0..1" />
+    <End Role="FileUpload" Type="Self.FileUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content">
+        <PropertyRef Name="ContentID" />
+      </Principal>
+      <Dependent Role="FileUpload">
+        <PropertyRef Name="ContentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdminMenuRel">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+  </Association>
+  <Association Name="KeyRel">
+    <End Role="Content" Type="Self.Content" Multiplicity="*" />
+    <End Role="Keyword" Type="Self.Keyword" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CommonDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Content" EntityType="Self.Content" />
+    <EntitySet Name="FileUpload" EntityType="Self.FileUpload" />
+    <EntitySet Name="Introduction" EntityType="Self.Introduction" />
+    <EntitySet Name="Keyword" EntityType="Self.Keyword" />
+    <EntitySet Name="Member" EntityType="Self.Member" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" />
+    <AssociationSet Name="FK_FileUpload_Category" Association="Self.FK_FileUpload_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="FileUpload" EntitySet="FileUpload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileUpload_Content" Association="Self.FK_FileUpload_Content">
+      <End Role="Content" EntitySet="Content" />
+      <End Role="FileUpload" EntitySet="FileUpload" />
+    </AssociationSet>
+    <AssociationSet Name="AdminMenuRel" Association="Self.AdminMenuRel">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="KeyRel" Association="Self.KeyRel">
+      <End Role="Content" EntitySet="Content" />
+      <End Role="Keyword" EntitySet="Keyword" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

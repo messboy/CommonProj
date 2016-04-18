@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CommonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="char" MaxLength="64" Nullable="false" />
+    <Property Name="Role" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" />
+    <Property Name="Tel" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Creator" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="char" MaxLength="36" />
+    <Property Name="LastLogonIP" Type="varchar" MaxLength="20" />
+    <Property Name="LastLogonTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AdminMenuRel">
+    <Key>
+      <PropertyRef Name="AdminID" />
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="AdminID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Creator" Type="char" MaxLength="36" />
+    <Property Name="ModifiedTime" Type="datetime" />
+    <Property Name="ModifiedBy" Type="char" MaxLength="36" />
+    <Property Name="IsPublish" Type="bit" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ContentID" />
+    </Key>
+    <Property Name="ContentID" Type="char" MaxLength="36" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Indentifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Language" Type="nvarchar" MaxLength="10" />
+    <Property Name="Rights" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ResourceLink" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CoverImage" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsOuterCoverImage" Type="bit" Nullable="false" />
+    <Property Name="ResourceType" Type="nvarchar" MaxLength="30" />
+    <Property Name="GradeLevel" Type="tinyint" Nullable="false" />
+    <Property Name="RelatedReSource" Type="nvarchar" MaxLength="200" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cost" Type="int" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="IsPublish" Type="bit" Nullable="false" />
+    <Property Name="ClickCount" Type="bigint" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="char" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="FileUpload">
+    <Key>
+      <PropertyRef Name="ItemOID" />
+    </Key>
+    <Property Name="ItemOID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ContentID" Type="char" MaxLength="36" />
+    <Property Name="Museum" Type="nvarchar" MaxLength="50" />
+    <Property Name="FunctionOID" Type="char" MaxLength="36" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Path" Type="varchar" MaxLength="200" />
+    <Property Name="EntryUrl" Type="varchar" MaxLength="200" />
+    <Property Name="Bit" Type="nchar" MaxLength="10" />
+    <Property Name="ClickCount" Type="int" Nullable="false" />
+    <Property Name="CoverImage" Type="bit" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="StateMessage" Type="nvarchar(max)" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+    <Property Name="Creator" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Introduction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="MuseumName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Museum" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="OpenTimeIntro" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar" MaxLength="550" />
+    <Property Name="Traffic" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CoverImage" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsOuterCoverImage" Type="bit" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ticket" Type="nvarchar(max)" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPublish" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KeyRel">
+    <Key>
+      <PropertyRef Name="ContentID" />
+      <PropertyRef Name="KeywordID" />
+    </Key>
+    <Property Name="ContentID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="KeywordID" Type="char" MaxLength="36" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Keyword">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="MemberName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MemberType" Type="nvarchar" MaxLength="10" />
+    <Property Name="Sex" Type="tinyint" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="LatestLogin" Type="datetime" />
+    <Property Name="LoginCount" Type="int" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="IsParent" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AdminMenuRel_Admin">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="1" />
+    <End Role="AdminMenuRel" Type="Self.AdminMenuRel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AdminMenuRel">
+        <PropertyRef Name="AdminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdminMenuRel_Menu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="AdminMenuRel" Type="Self.AdminMenuRel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="AdminMenuRel">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileUpload_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="FileUpload" Type="Self.FileUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FileUpload">
+        <PropertyRef Name="FunctionOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileUpload_Content">
+    <End Role="Content" Type="Self.Content" Multiplicity="0..1" />
+    <End Role="FileUpload" Type="Self.FileUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content">
+        <PropertyRef Name="ContentID" />
+      </Principal>
+      <Dependent Role="FileUpload">
+        <PropertyRef Name="ContentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyRel_Content">
+    <End Role="Content" Type="Self.Content" Multiplicity="1" />
+    <End Role="KeyRel" Type="Self.KeyRel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content">
+        <PropertyRef Name="ContentID" />
+      </Principal>
+      <Dependent Role="KeyRel">
+        <PropertyRef Name="ContentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KeyRel_Keyword">
+    <End Role="Keyword" Type="Self.Keyword" Multiplicity="1" />
+    <End Role="KeyRel" Type="Self.KeyRel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Keyword">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KeyRel">
+        <PropertyRef Name="KeywordID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CommonDBModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminMenuRel" EntityType="Self.AdminMenuRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileUpload" EntityType="Self.FileUpload" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Introduction" EntityType="Self.Introduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KeyRel" EntityType="Self.KeyRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Keyword" EntityType="Self.Keyword" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AdminMenuRel_Admin" Association="Self.FK_AdminMenuRel_Admin">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="AdminMenuRel" EntitySet="AdminMenuRel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdminMenuRel_Menu" Association="Self.FK_AdminMenuRel_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="AdminMenuRel" EntitySet="AdminMenuRel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileUpload_Category" Association="Self.FK_FileUpload_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="FileUpload" EntitySet="FileUpload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileUpload_Content" Association="Self.FK_FileUpload_Content">
+      <End Role="Content" EntitySet="Content" />
+      <End Role="FileUpload" EntitySet="FileUpload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyRel_Content" Association="Self.FK_KeyRel_Content">
+      <End Role="Content" EntitySet="Content" />
+      <End Role="KeyRel" EntitySet="KeyRel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KeyRel_Keyword" Association="Self.FK_KeyRel_Keyword">
+      <End Role="Keyword" EntitySet="Keyword" />
+      <End Role="KeyRel" EntitySet="KeyRel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Filter.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Filter.pdb
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Dao.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Model.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\EntityFramework.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Dao.pdb
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\Model.pdb
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\EntityFramework.xml
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\obj\Debug\Filter.csprojResolveAssemblyReference.cache
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\obj\Debug\Filter.dll
+C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Filter\obj\Debug\Filter.pdb

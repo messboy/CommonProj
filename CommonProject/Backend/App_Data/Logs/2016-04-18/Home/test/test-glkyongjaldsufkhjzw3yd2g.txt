@@ -1,0 +1,75 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-18 10:48:57.4895 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：home 
+ action：test 
+ request：/home/test 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：無法載入檔案或組件 'Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' 或其相依性的其中之一。 找到的組件資訊清單定義與組件參考不符。 (發生例外狀況於 HRESULT: 0x80131040) 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 10:52:26.9655 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：home 
+ action：test 
+ request：/home/test 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：無法載入檔案或組件 'Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' 或其相依性的其中之一。 找到的組件資訊清單定義與組件參考不符。 (發生例外狀況於 HRESULT: 0x80131040) 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 10:52:59.4794 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：home 
+ action：test 
+ request：/home/test 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：無法載入檔案或組件 'Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' 或其相依性的其中之一。 找到的組件資訊清單定義與組件參考不符。 (發生例外狀況於 HRESULT: 0x80131040) 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 10:54:32.4597 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：home 
+ action：test 
+ request：/home/test 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：無法載入檔案或組件 'Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' 或其相依性的其中之一。 找到的組件資訊清單定義與組件參考不符。 (發生例外狀況於 HRESULT: 0x80131040) 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 10:55:59.9637 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：home 
+ action：test 
+ request：/home/test 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：無法載入檔案或組件 'Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' 或其相依性的其中之一。 找到的組件資訊清單定義與組件參考不符。 (發生例外狀況於 HRESULT: 0x80131040) 
+
+ ==================================================================================================== 
+             
