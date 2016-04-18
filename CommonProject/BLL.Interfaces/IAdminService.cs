@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dao;
 using Model;
+using Utility.Extensions.Security;
 
 namespace BLL.Interfaces
 {
@@ -18,9 +19,9 @@ namespace BLL.Interfaces
         Admin Delete(string id);
 
         List<AdminInfo> GetAll();
-        //List<AdminViewModel> GetList(PaginationModel paginationModel, CustomIdentity identity);
+        List<AdminInfo> GetList(PaginationModel paginationModel, CustomIdentity identity);
 
-        //AdminViewModel GetDetail(string id);
+        AdminInfo GetDetail(string id);
 
         List<Menu> GetMenuByAdminID(string adminId);
 

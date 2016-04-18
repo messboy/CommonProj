@@ -32,7 +32,7 @@ namespace BLL.Mappings
                     .ForMember(i => i.Email, s => s.MapFrom(i => i.Email))
                     .ForMember(i => i.Mobile, s => s.MapFrom(i => i.Mobile))
                     .ForMember(i => i.Enable, s => s.MapFrom(i => i.Enable))
-                    //.ForMember(i => i.Menu, s => s.MapFrom(i => i.Menu))
+                    .ForMember(i => i.Menu, s => s.MapFrom(i => i.Menu))
                     ;
 
             // getlist dateail 用
@@ -52,7 +52,7 @@ namespace BLL.Mappings
                     .ForMember(i => i.ModifiedBy, s => s.MapFrom(i => i.ModifiedBy))
                     .ForMember(i => i.LastLogonIP, s => s.MapFrom(i => i.LastLogonIP))
                     .ForMember(i => i.LastLogonTime, s => s.MapFrom(i => i.LastLogonTime))
-                    //.ForMember(i => i.Menu, s => s.MapFrom(i => i.Menu))
+                    .ForMember(i => i.Menu, s => s.MapFrom(i => i.Menu))
                     ;
         }
     }

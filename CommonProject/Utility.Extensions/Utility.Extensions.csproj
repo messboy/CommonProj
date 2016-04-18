@@ -56,8 +56,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -96,6 +96,10 @@
     <Compile Include="Pagination\QueryableOrderByExtensions.cs" />
     <Compile Include="Pagination\QueryableWhereExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CustomIdentity.cs" />
+    <Compile Include="Security\CustomMembershipUser.cs" />
+    <Compile Include="Security\CustomPrincipal.cs" />
+    <Compile Include="Security\SecurityExtentions.cs" />
     <Compile Include="Security\SecurityHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,9 +107,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dao\Dao.csproj">
-      <Project>{cb57b3d9-3618-46eb-854c-0b07247c8dd5}</Project>
-      <Name>Dao</Name>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{c5313ade-966c-4de5-b33d-7b3bca9abdd5}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

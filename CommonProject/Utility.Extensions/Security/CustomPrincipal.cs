@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Web;
 
-namespace Backend.Security
+namespace Utility.Extensions.Security
 {
     [Serializable]
     public class CustomPrincipal : IPrincipal

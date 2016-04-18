@@ -158,3 +158,6 @@ C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\bin\zh-Hant\System.We
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\obj\Debug\Backend.csprojResolveAssemblyReference.cache
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\obj\Debug\Backend.dll
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\obj\Debug\Backend.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\bin\LinqKit.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\bin\LinqKit.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Backend\bin\LinqKit.xml

@@ -1,0 +1,45 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:48:19.2169 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetList 
+ request：/Admin/GetList 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:48:31.8796 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetList 
+ request：/Admin/GetList 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:48:52.3408 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetList 
+ request：/Admin/GetList 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             

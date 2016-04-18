@@ -62,3 +62,6 @@ C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\bin\Debug\zh-Han
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\obj\Debug\BLL.Services.csprojResolveAssemblyReference.cache
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\obj\Debug\BLL.Services.dll
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\obj\Debug\BLL.Services.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\bin\Debug\LinqKit.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\bin\Debug\LinqKit.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Services\bin\Debug\LinqKit.xml

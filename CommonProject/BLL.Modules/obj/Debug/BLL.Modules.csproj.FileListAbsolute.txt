@@ -68,3 +68,6 @@ C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\bin\Debug\zh-Hant
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\obj\Debug\BLL.Modules.csprojResolveAssemblyReference.cache
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\obj\Debug\BLL.Modules.dll
 C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\obj\Debug\BLL.Modules.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\bin\Debug\LinqKit.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\bin\Debug\LinqKit.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\BLL.Modules\bin\Debug\LinqKit.xml

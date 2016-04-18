@@ -5,7 +5,7 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 
-namespace Backend.Security
+namespace Utility.Extensions.Security
 {
     /// <summary>
     /// An identity object represents the user on whose behalf the code is running.

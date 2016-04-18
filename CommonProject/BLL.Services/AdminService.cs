@@ -8,7 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utility.Extensions.Pagination;
 using Utility.Extensions.Security;
+
+using LinqKit;
+using Filter;
 
 namespace BLL.Services
 {
@@ -47,6 +51,29 @@ namespace BLL.Services
             db.SaveChanges();
 
             return model;
+        }
+
+        public List<AdminInfo> GetList(PaginationModel pagination, CustomIdentity identity)
+        {
+            // 搜尋
+            var query = db.Admin.AsNoTracking().AsExpandable()
+                .Where(AdminFilter.SearchFilter(pagination));
+                //.Where(AdminFilter.AuthorityFilter(identity));
+
+            // 總數 
+            var count = query.Count();
+
+            //  排序 分頁 
+            var data = query
+                .DynamicOrderBy(pagination)
+                .PaginateBy(pagination)
+                .ToList();
+
+            // 映射
+            var result = Mapper.Map<List<AdminInfo>>(data);
+            if (count != 0) result[0].TotalCount = count;
+
+            return result;
         }
 
         public Admin Delete(string id)
@@ -118,6 +145,6 @@ namespace BLL.Services
         }
 
 
-        
+      
     }
 }

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Security;
 
 
-namespace Backend.Security
+namespace Utility.Extensions.Security
 {
     public class CustomMembershipUser : MembershipUser
     {

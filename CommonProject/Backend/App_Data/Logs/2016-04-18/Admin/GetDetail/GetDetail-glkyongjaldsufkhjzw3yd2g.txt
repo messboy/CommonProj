@@ -1,0 +1,15 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:38:12.0302 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetDetail 
+ request：/Admin/GetDetail/167e1591-570f-449e-bd48-560cd743c95f 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：Error getting value from 'Admin' on 'System.Data.Entity.DynamicProxies.Menu_B20103ADB1349087366BED6FD0718D27C89DDB71BD0396FA79C0FEF5DF622825'. 
+
+ ==================================================================================================== 
+             

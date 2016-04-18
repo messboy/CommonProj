@@ -208,3 +208,78 @@
 
  ==================================================================================================== 
              
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:34:10.2533 
+ Log等級：DEBUG 
+ Logger：Backend.Controllers.HomeController 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Home 
+ action：Index 
+ request：/ 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：test 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:37:20.4892 
+ Log等級：DEBUG 
+ Logger：Backend.Controllers.HomeController 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Home 
+ action：Index 
+ request：/ 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：test 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:39:50.1788 
+ Log等級：DEBUG 
+ Logger：Backend.Controllers.HomeController 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Home 
+ action：Index 
+ request：/ 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：test 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 15:43:40.1239 
+ Log等級：DEBUG 
+ Logger：Backend.Controllers.HomeController 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Home 
+ action：Index 
+ request：/ 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：test 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-18 16:03:35.2153 
+ Log等級：DEBUG 
+ Logger：Backend.Controllers.HomeController 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Home 
+ action：Index 
+ request：/ 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：test 
+
+ ==================================================================================================== 
+             

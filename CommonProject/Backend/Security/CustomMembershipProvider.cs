@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Security;
+using Utility.Extensions.Security;
 
 namespace Backend.Security
 {

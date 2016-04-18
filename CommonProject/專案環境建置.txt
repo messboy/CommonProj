@@ -38,7 +38,7 @@
 
 
 
-.權限驗證
+7.權限驗證
 	自訂權限驗證
 	修正webconfig使用自訂
 	<membership defaultProvider="CustomMembershipProvider">
@@ -47,3 +47,7 @@
         <add name="CustomMembershipProvider" type="Backend.Security.CustomMembershipProvider" cacheTimeoutInMinutes="30" />
       </providers>
     </membership>
+
+
+8.登入功能
+8.Admin CRUD功能

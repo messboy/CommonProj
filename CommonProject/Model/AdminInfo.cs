@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class AdminInfo
+    public class AdminInfo : BaseModel
     {
         public string ID { get; set; }
         public string Account { get; set; }

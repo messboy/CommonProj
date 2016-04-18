@@ -8,3 +8,15 @@ C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Model\bin\Debug\EntityFrame
 C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Model\bin\Debug\Dao.pdb
 C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Model\bin\Debug\EntityFramework.xml
 C:\Users\OI\Documents\SVN\基礎專案\CommonProject\Model\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Model.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Model.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Dao.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\EntityFramework.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Dao.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\EntityFramework.xml
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\obj\Debug\Model.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\obj\Debug\Model.pdb
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\OI\Documents\SVN\CommonProj\CommonProject\Model\bin\Debug\Newtonsoft.Json.xml
