@@ -17,6 +17,7 @@
         <AssociationConnector Association="CommonDBModel.FK_FileUpload_Content" ManuallyRouted="false" />
         <AssociationConnector Association="CommonDBModel.AdminMenuRel" ManuallyRouted="false" />
         <AssociationConnector Association="CommonDBModel.KeyRel" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CommonDBModel.Backendlog" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

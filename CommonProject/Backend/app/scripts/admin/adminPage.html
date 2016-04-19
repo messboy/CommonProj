@@ -1,0 +1,166 @@
+﻿
+<div class="">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <!-- Title -->
+            <h3 ng-hide="a.isEdit" class="page-header">權限管理 新增</h3>
+            <h3 ng-show="a.isEdit" class="page-header">權限管理 編輯</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    必填表單
+                </div>
+                <div class="panel-body">
+                    <!-- /.row -->
+                    <form class="form-horizontal" role="form" name="form1">
+                        <div class="form-group"></div>
+                        <div class="form-group">
+
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>權限:</label>
+                            <div class="col-sm-9 radio">
+                                <label ng-repeat="role in a.roles">
+                                    <input type="radio" ng-model="a.data.Role" ng-value="role.key" ng-change="a.setMeseum()" />{{role.value}} &emsp;
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>帳號:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="account" ng-model="a.data.Account" required id="" placeholder="">
+                                <span ng-class="{'error-alert':isInvalid('account')}" ng-show="isInvalid('account')">
+                                    必填
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for=""><span class="red-color">*</span>密碼:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="Password" ng-model="a.data.Password" required id="" placeholder="">
+                                <span ng-class="{'error-alert':isInvalid('Password')}" ng-show="isInvalid('Password')">
+                                    必填
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for=""><span class="red-color">*</span>姓名:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="name" ng-model="a.data.Name" required id="" placeholder="">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for="">電話:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="tel" ng-model="a.data.Tel" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for=""><span class="red-color">*</span>信箱:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" name="email" ng-model="a.data.Email" required placeholder="Email">
+                                <span ng-class="{'error-alert':isInvalid('email')}" ng-show="isInvalid('email')">
+                                    格式不正確
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for=""><span class="red-color">*</span>項目設定:</label>
+                            <div class="col-sm-9 radio">
+
+                                <label class="label-checkbox" ng-repeat="menu in a.menus1" style="">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus1)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus2">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus2)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus3">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus3)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus4">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus4)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus5">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus5)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus6">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus6)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus7">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus7)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus8">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus8)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <br />
+                                <label class="label-checkbox" ng-repeat="menu in a.menus9">
+                                    <input type="checkbox" checklist-model="a.data.Menu" name="menu" checklist-value="menu" checklist-change="a.checkParent(menu, a.menus9)"
+                                           ng-required="a.data.Menu == undefined || a.data.Menu.length == 0"> {{menu.Name}} &emsp;
+                                </label>
+                                <span ng-class="{'error-alert':isInvalid('menu')}" ng-show="isInvalid('menu')">
+                                    必填
+                                </span>
+ 
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>是否啟用:</label>
+                            <div class="col-sm-9 radio">
+                                <label>
+                                    <input type="radio" ng-model="a.data.Enable" ng-value='true'>
+                                    是
+                                </label>
+                                <label>
+                                    <input type="radio" ng-model="a.data.Enable" ng-value=false>
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5" ng-show="a.isDebug">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading=" + 偵錯模式" is-open="true" is-disabled="false">
+                    <div ng-repeat="(key, item) in a.data">
+                        <label>{{key}} :</label>
+                        <pre>{{item}}</pre>
+                    </div>
+                </uib-accordion-group>
+            </uib-accordion>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-offset-5 col-md-7" style="text-align:center">
+            <button type="button" ng-click="a.addItem()" ng-hide="a.isEdit" class="btn btn-default">新增帳號</button>
+            <button type="button" ng-click="a.updateItem()" ng-show="a.isEdit" class="btn btn-default">更新帳號</button>
+            <a ui-sref="dashboard.admin" class="btn btn-default">
+                取消
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <span><span class="red-color">*</span>註:如有更新權限請重新登入方能生效！！</span>
+    </div>
+</div>

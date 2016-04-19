@@ -1,0 +1,30 @@
+﻿<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><b>後台管理平台</b></a>
+        </div>
+        <!-- /header 導覽列 -->
+        <div class="nav navbar-top-links navbar-right navbar-brand" uib-dropdown>
+            <!-- /.dropdown -->
+            <a id="single-button " class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle ng-disabled="disabled">
+                <i class="fa fa-user fa-1x"></i>
+                <label ng-bind="$root.user.userName"></label>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="uib-dropdown-menu" aria-labelledby="single-button">
+                <li>
+                    <a ui-sref="login({obj: 'signout'})"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+            <!-- /.dropdown -->
+        </div>
+        <!-- /menu 列 -->
+        <sidebar></sidebar>
+    </nav>
+    <div id="page-wrapper" style="min-height: 561px;">
+        <div ui-view></div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>

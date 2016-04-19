@@ -169,5 +169,24 @@
         <ScalarProperty Name="ID" ColumnName="KeywordID" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Backendlog">
+      <EntityTypeMapping TypeName="CommonDBModel.Backendlog">
+        <MappingFragment StoreEntitySet="Backendlog">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="LoggerName" ColumnName="LoggerName" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="RequestMethod" ColumnName="RequestMethod" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Museum" ColumnName="Museum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,0 +1,17 @@
+﻿
+
+<label ng-repeat="grade in Grades">
+    <input type="checkbox" ng-model="selectValue" name="grade" checklist-value="grade"> {{grade.GradeName}} &emsp;
+</label>
+<span ng-class="{'error-alert':isInvalid('grade')}" ng-show="isInvalid('grade')">
+    必填
+</span>
+
+
+<!--<label ng-repeat="grade in c.grades">
+    <input type="checkbox" checklist-model="c.data.Grade" name="grade" checklist-value="grade"
+           ng-required="c.data.Grade == undefined || c.data.Grade.length == 0"> {{grade.GradeName}} &emsp;
+</label>
+<span ng-class="{'error-alert':isInvalid('grade')}" ng-show="isInvalid('grade')">
+    必填
+</span>-->

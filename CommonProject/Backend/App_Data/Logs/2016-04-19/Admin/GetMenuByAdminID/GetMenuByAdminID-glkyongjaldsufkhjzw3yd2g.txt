@@ -1,0 +1,90 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-19 09:41:30.5233 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-19 09:46:58.4921 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-19 09:48:03.1048 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-19 09:53:18.2468 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-19 09:59:09.8099 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             
+ ==================================================================================================== 
+ 發生時間：2016-04-19 10:13:19.6245 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：GetMenuByAdminID 
+ request：/Admin/GetMenuByAdminID 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：並未將物件參考設定為物件的執行個體。 
+
+ ==================================================================================================== 
+             

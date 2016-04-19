@@ -49,6 +49,7 @@
     <Compile Include="BaseModel.cs" />
     <Compile Include="CotentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ArticleViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

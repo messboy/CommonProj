@@ -1,0 +1,99 @@
+﻿ 
+<div class="">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <!-- Title -->
+            <h3 ng-hide="m.isEdit" class="page-header">會員管理 新增</h3>
+            <h3 ng-show="m.isEdit" class="page-header">會員管理 編輯</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    必填表單
+                </div>
+                <div class="panel-body">
+                    <!-- /.row -->
+                    <form class="form-horizontal" role="form" name="form1">
+                        <div class="form-group"></div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>帳號:</label>
+                            <div class="col-sm-9 radio">
+                                {{m.data.Account}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>會員名稱:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="memberName" ng-model="m.data.MemberName" required id="" placeholder="">
+                                <span ng-class="{'error-alert':isInvalid('memberName')}" ng-show="isInvalid('memberName')">
+                                    必填
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="">暱稱:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="nickName" ng-model="m.data.NickName" id="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>性別:</label>
+                            <div class="col-sm-9 radio">
+                                <label>
+                                    <input type="radio" ng-model="m.data.Sex" ng-value=0>
+                                    男
+                                </label>
+                                <label>
+                                    <input type="radio" ng-model="m.data.Sex" ng-value=1>
+                                    女
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>是否啟用:</label>
+                            <div class="col-sm-9 radio">
+                                <label>
+                                    <input type="radio" ng-model="m.data.Enable" ng-value='true'>
+                                    是
+                                </label>
+                                <label>
+                                    <input type="radio" ng-model="m.data.Enable" ng-value=false>
+                                    否
+                                </label>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5" ng-show="m.isDebug">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading=" + 偵錯模式" is-open="true" is-disabled="false">
+                    <div ng-repeat="(key, item) in m.data">
+                        <label>{{key}} :</label>
+                        <pre>{{item}}</pre>
+                    </div>
+                </uib-accordion-group>
+            </uib-accordion>
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-offset-5 col-md-7" style="text-align:center">
+            <button type="button" ng-click="m.addItem()" ng-hide="m.isEdit" class="btn btn-default">新增資料</button>
+            <button type="button" ng-click="m.updateItem()" ng-show="m.isEdit" class="btn btn-default">更新資料</button>
+            <a ui-sref="dashboard.member" class="btn btn-sm btn-default">
+                取消
+            </a>
+        </div>
+    </div>
+</div>

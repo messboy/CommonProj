@@ -1,0 +1,68 @@
+﻿
+<div class="row">
+    <div class="col-lg-12">
+        <!-- Title -->
+        <h2 class="page-header">匯出資料</h2>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- TODO value 抽出 -->
+                <div class="col-md-12">
+                    <div class=" radio">
+                        <span><b>請選擇匯出格式:&emsp;</b></span><br /><br />
+                        <label ng-repeat="option in e.exportFormat">
+                            <input type="radio" ng-model="e.Format" ng-value="option.key" ng-change="" />{{option.value}} &emsp;
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class=" radio">
+                        <span><b>請選擇匯出類型:&emsp;</b></span><br /><br />
+                        <label ng-repeat="option in e.exportOption">
+                            <input type="radio" ng-model="e.type" ng-value="option.key" ng-change="" />{{option.value}} &emsp;
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12"><br /><span><b>請選擇時間:&emsp;</b></span><br /><br /></div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control begintime" ng-model="e.beginTime" ng-disabled="true"
+                                   datepicker-popup="{{e.datePicker.format}}"
+                                   datepicker-options="e.datePicker.options"
+                                   is-open="e.datePicker.instances['dateHired']"
+                                   close-text="Close"
+                                   placeholder="啟始時間" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="e.datePicker.open($event, 'dateHired')"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            
+                            <input type="text" class="form-control endtime" ng-model="e.endTime" ng-disabled="true"
+                                   datepicker-popup="{{e.datePicker.format}}"
+                                   datepicker-options="e.datePicker.options"
+                                   is-open="e.datePicker.instances['dateFired']"
+                                   close-text="Close"
+                                   placeholder="結束時間" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="e.datePicker.open($event, 'dateFired')"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row col-md-12">
+                    <button class="btn btn-primary" ng-click="e.export()">匯出資料</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,107 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <!-- Title -->
+        <h2 class="page-header">網站流量統計</h2>
+    </div>
+</div>
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-xs-10">
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    每日登入人數統計報表
+                </h2>
+            </div>
+            <br />
+            <div class="panel-body">
+                <ddl-year-month select-year="r.year" select-month="r.month"></ddl-year-month>
+                <button type="button" ng-click="r.updateFlow()">查詢</button>
+                <canvas width="750" height="150" id="line" class="chart chart-line"
+                        chart-data="r.data"
+                        chart-labels="r.labels"
+                        chart-series="r.series"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-5">
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    Session 統計
+                </h2>
+            </div>
+            <br />
+            <div class="panel-body">
+                <div id="chart-1-container"></div>
+
+            </div>
+        </div>
+        <!-- Google Analytics Charts-->
+
+    </div>
+    <div class="col-xs-5">
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    訪客來源
+                </h2>
+            </div>
+            <br />
+            <div class="panel-body">
+                <div id="chart-2-container"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-5" >
+        <label>
+            註: 更多詳細資訊請至
+            <a href="https://www.google.com/analytics/" target="_blank">Google Analytics</a>
+            分析頁面
+        </label>
+        <br />
+        <label>
+            帳號 :popularsciencesite@gmail.com
+            ，密碼請洽詢相關人員。
+        </label>
+           
+    </div>
+    <div class="col-xs-5" style="display:none">
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    來源統計
+                </h2>
+            </div>
+            <br />
+            <div class="panel-body">
+                <div id="chart-3-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-5" style="display:none">
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h2 class="panel-title">
+                    頁面平均停留秒數
+                </h2>
+            </div>
+            <br />
+            <div class="panel-body">
+                <div id="chart-4-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

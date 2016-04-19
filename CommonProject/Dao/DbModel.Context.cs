@@ -33,5 +33,6 @@ namespace Dao
         public virtual DbSet<Keyword> Keyword { get; set; }
         public virtual DbSet<Member> Member { get; set; }
         public virtual DbSet<Menu> Menu { get; set; }
+        public virtual DbSet<Backendlog> Backendlog { get; set; }
     }
 }

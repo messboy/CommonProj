@@ -11,13 +11,7 @@ namespace BLL.Mappings
 {
     public class AdminModelMappingProfile : Profile
     {
-        public string ProfileName
-        {
-            get
-            {
-                return "AdminModelProfile";
-            }
-        }
+        public AdminModelMappingProfile() : base("AdminModelProfile") { }
 
         protected override void Configure()
         {

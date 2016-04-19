@@ -1,0 +1,29 @@
+﻿<div ng-if="isUploaded || imgPath">
+    <br />
+    <a href="Uploads/{{imgPath}}" target="_blank"><img ng-src="imgs/crop/150/150/{{imgPath}}" /></a> &emsp;
+    <a class="" ng-click="remove(imgPath)">移除</a>
+    
+</div>
+<br />
+
+<div>
+    <button type="button" class="btn btn-default" ngf-select="showFiles(File)"
+            ng-model="File"
+            ngf-max-size="10MB"
+            multiple
+            accept="image/*">
+        選擇圖片
+    </button>
+    <button type="button" class="btn btn-primary" ng-click="uploadFiles(File)">
+        上傳圖片
+    </button>
+    <label>{{Files[0].name}}</label>
+    <br /><br />
+    <div ng-if="note =='ebook'">
+        <span class="red-color">註.</span> 圖片格式為gif、png、jpg。建議尺寸:425x600px。
+    </div>
+    <div ng-if="note == undefined">
+        <span class="red-color">註.</span> 圖片格式為gif、png、jpg。建議尺寸:600x450px。
+    </div>
+    <br />
+</div>

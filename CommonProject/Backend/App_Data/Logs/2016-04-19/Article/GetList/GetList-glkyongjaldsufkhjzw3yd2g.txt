@@ -1,0 +1,15 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-19 15:02:53.2532 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Article 
+ action：GetList 
+ request：/Article/GetList 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：Error getting value from 'Content' on 'System.Data.Entity.DynamicProxies.Keyword_725D7205158F417A535A0B6700AC0A4A7D8F546BC7B2798BD4592BCD6429DB31'. 
+
+ ==================================================================================================== 
+             

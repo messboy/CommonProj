@@ -1,0 +1,15 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-19 15:29:28.0685 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Article 
+ action：GetDetail 
+ request：/Article/GetDetail/ca38f10c-b442-4dc3-adde-af56870f5561 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：GET 
+ 錯誤訊息：方法或作業尚未實作。 
+
+ ==================================================================================================== 
+             

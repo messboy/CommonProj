@@ -28,6 +28,24 @@
     <Property Name="AdminID" Type="char" MaxLength="36" Nullable="false" />
     <Property Name="MenuID" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Backendlog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Museum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Controller" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Action" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SessionId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IP" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="RequestMethod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="10" />
+    <Property Name="LoggerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="ID" />
@@ -130,7 +148,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ID" Type="char" MaxLength="36" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="Member">
@@ -235,6 +253,7 @@
   <EntityContainer Name="CommonDBModelStoreContainer">
     <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AdminMenuRel" EntityType="Self.AdminMenuRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Backendlog" EntityType="Self.Backendlog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FileUpload" EntityType="Self.FileUpload" Schema="dbo" store:Type="Tables" />

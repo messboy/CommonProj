@@ -1,43 +1,151 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="後台網站" />
+
+    <title>@ViewBag.Title</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="~/app/bower/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="~/app/styles/main.css">
+    <link rel="stylesheet" href="~/app/styles/sb-admin-2.css">
+    <link rel="stylesheet" href="~/app/styles/timeline.css">
+    <link rel="stylesheet" href="~/app/bower/metisMenu/dist/metisMenu.min.css">
+    <link rel="stylesheet" href="~/app/bower/angular-loading-bar/build/loading-bar.min.css">
+    <link rel="stylesheet" href="~/app/bower/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link href="~/app/bower/angular-chart.js/angular-chart.min.css" rel="stylesheet" />
+    <link href="~/app/bower/ui-select/dist/select.css" rel="stylesheet" />
+    <link href="~/app/bower/ng-tags-input/ng-tags-input.css" rel="stylesheet" />
+    <link href="~/app/bower/ng-tags-input/ng-tags-input.bootstrap.css" rel="stylesheet" />
+
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
-        </footer>
-    </div>
+    @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="~/app/bower/jquery/dist/jquery.min.js"></script>
+    <script src="~/app/bower/angular/angular.min.js"></script>
+    <script src="~/app/bower/angular/angular-sanitize.min.js"></script>
+    <script src="~/app/bower/angular/angular-route.min.js"></script>
+    <script src="~/app/bower/angular/angular-animate.min.js"></script>
+    <script src="~/app/bower/angular-bootstrap/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="~/app/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="~/app/bower/json3/lib/json3.min.js"></script>
+    <script src="~/app/bower/angular-loading-bar/build/loading-bar.min.js"></script>
+    <script src="~/app/bower/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="~/app/bower/Smart-Table/dist/smart-table.js"></script>
+    <script src="~/app/bower/angular/checklist-model.js"></script>
+    <script src="~/app/bower/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="~/app/bower/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="~/app/bower/angular-chart.js/Chart.js"></script>
+    <script src="~/app/bower/angular-chart.js/angular-chart.js"></script>
+    <script src="~/app/bower/ui-select/dist/select.js"></script>
+    <script src="~/app/bower/ng-tags-input/ng-tags-input.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <script src="~/app/bower/tinymce-dist/tinymce.js"></script>
+    <script src="~/app/bower/angular-ui-tinymce/src/tinymce.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- 初始必讀取js -->
+    <script src="~/app/scripts/app.js"></script>
+    <script src="~/app/scripts/sb-admin-2.js"></script>
+    <!-- controllers -->
+
+    <script src="~/app/scripts/admin/adminController.js"></script>
+    <script src="~/app/scripts/admin/adminPageController.js"></script>
+    <script src="~/app/scripts/admin/adminService.js"></script>
+   
+    <script src="~/app/scripts/article/articleController.js"></script>
+    <script src="~/app/scripts/article/articlePageController.js"></script>
+    <script src="~/app/scripts/article/articleService.js"></script>
+    <script src="~/app/scripts/science/scienceController.js"></script>
+    <script src="~/app/scripts/science/sciencePageController.js"></script>
+    <script src="~/app/scripts/science/scienceService.js"></script>
+  
+    <script src="~/app/scripts/introduction/introductionController.js"></script>
+    <script src="~/app/scripts/introduction/introductionPageController.js"></script>
+    <script src="~/app/scripts/introduction/introductionService.js"></script>
+  
+    <script src="~/app/scripts/backendlog/backendlogController.js"></script>
+    <script src="~/app/scripts/backendlog/backendlogService.js"></script>
+   
+    <script src="~/app/scripts/login/loginController.js"></script>
+    <script src="~/app/scripts/login/loginService.js"></script>
+    <script src="~/app/scripts/shared/layoutController.js"></script>
+    <script src="~/app/scripts/shared/layoutService.js"></script>
+    <script src="~/app/scripts/export/exportService.js"></script>
+    <script src="~/app/scripts/export/exportController.js"></script>
+    <script src="~/app/scripts/import/importService.js"></script>
+    <script src="~/app/scripts/import/importController.js"></script>
+    <script src="~/app/scripts/member/memberController.js"></script>
+    <script src="~/app/scripts/member/memberPageController.js"></script>
+    <script src="~/app/scripts/member/memberService.js"></script>
+    
+    <script src="~/app/scripts/common/controllers/ModalInstanceController.js"></script>
+    <script src="~/app/scripts/report_visit/reportVisitController.js"></script>
+    <script src="~/app/scripts/report_visit/reportVisitService.js"></script>
+    <script src="~/app/scripts/report_share/reportShareService.js"></script>
+    <script src="~/app/scripts/report_share/reportShareController.js"></script>
+    <script src="~/app/scripts/report_failure/reportFailureController.js"></script>
+    <script src="~/app/scripts/report_failure/reportFailureService.js"></script>
+   
+
+    <!-- constant -->
+    <script src="~/app/scripts/common/constant/checkboxList.js"></script>
+    <script src="~/app/scripts/common/constant/dropdownList.js"></script>
+    <script src="~/app/scripts/common/constant/constants.js"></script>
+    <script src="~/app/scripts/common/constant/menuList.js"></script>
+
+    <!-- directives -->
+    <script src="~/app/scripts/common/directives/sidebar/sidebar.js"></script>
+    <script src="~/app/scripts/common/directives/table/table.js"></script>
+    <script src="~/app/scripts/common/directives/table/searchWatchModel.js"></script>
+    <script src="~/app/scripts/common/directives/pageSelect/pageSelect.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/interactivityType.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/intendedenduserRole.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/language.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/museums.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/rights.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/hourAndMin.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/resourceType.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/publishDate.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/role.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/newsType.js"></script>
+    <script src="~/app/scripts/common/directives/checkboxs/grades.js"></script>
+    <script src="~/app/scripts/common/directives/upload/uploadImg.js"></script>
+    <script src="~/app/scripts/common/directives/upload/uploadMutiImg.js"></script>
+    <script src="~/app/scripts/common/directives/ckeditor/ckeditor.js"></script>
+    <script src="~/app/scripts/common/directives/datetimepicker/datetimepicker.js"></script>
+    <script src="~/app/scripts/common/directives/dropdownlist/yearAndMonth.js"></script>
+    <!--filter-->
+    <script src="~/app/scripts/common/filter/commonFilter.js"></script>
+    <!--factory-->
+    <script src="~/app/scripts/common/factory/paginationHelper.js"></script>
+    <script src="~/app/scripts/common/factory/errorHelper.js"></script>
+    <script src="~/app/scripts/common/factory/formHelper.js"></script>
+    <script src="~/app/scripts/common/factory/uploadHelper.js"></script>
+    <!-- endbuild -->
+    @*@Scripts.Render("~/bundles//Scripts/app/scripts")*@
+
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

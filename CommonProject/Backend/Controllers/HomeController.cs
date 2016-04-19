@@ -3,6 +3,7 @@ using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using Utility.Extensions.JsonNet;
@@ -23,23 +24,18 @@ namespace Backend.Controllers
 
         public ActionResult Index()
         {
-            Logger.Debug("test");
-            return View();
+            var authInfo = new AuthInfo
+            {
+                Authenticated = Request.IsAuthenticated ? true : false,
+            };
+
+            if (Request.IsAuthenticated)
+            {
+                authInfo.UserName = Thread.CurrentPrincipal.Identity.Name;
+            }
+            return View(authInfo);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
 
         public ActionResult test()
         {

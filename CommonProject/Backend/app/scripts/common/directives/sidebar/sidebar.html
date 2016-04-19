@@ -1,0 +1,122 @@
+﻿<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav in" id="side-menu">
+            <!--<sidebar-search></sidebar-search>-->
+            <!-- 數字為資料庫對應的ID編號 TODO 從後台直接讀取或是做一個mapping表 -->
+            <li style="padding:5px"></li>
+
+            <li ng-class="{active:collapseVar==1}" ng-if="isValid(10)">
+                <a href="" ng-click="check(1)">
+                    <i class="fa fa-dashboard fa-fw"></i> 系統權限管理<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=1" ng-if="isValid(11)">
+                    <li ui-sref-active=" active">
+                        <a ui-sref="dashboard.admin">帳號管理</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li ng-class="{active:collapseVar==2}" ng-if="isValid(20)">
+                <a href="" ng-click="check(2)">
+                    <i class="fa fa-dashboard fa-fw"></i> 會員管理<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=2" ng-if="isValid(21)">
+                    <li ui-sref-active=" active">
+                        <a ui-sref="dashboard.member">會員清單</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
+            <li ng-class="{active:collapseVar==5}" ng-if="isValid(30)">
+                <a href="" ng-click="check(5)">
+                    <i class="fa fa-pencil fa-fw"></i> 上稿管理<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=5">
+                    <li ui-sref-active="active" ng-if="isValid(32)">
+                        <a ui-sref="dashboard.introduction">未實做</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(33)">
+                        <a ui-sref="dashboard.science">未實做</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(35)">
+                        <a ui-sref="dashboard.article">文章管理</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li ui-sref-active="active" ng-if="isValid(40)">
+                <a ui-sref="dashboard.collection"><i class="fa fa-list fa-fw"></i> 上稿管理2</a>
+            </li>
+            <li ng-class="{active:collapseVar==6}" ng-if="isValid(50)">
+                <a href="" ng-click="check(6)">
+                    <i class="fa fa-files-o fa-fw"></i> 上稿管理3<span class="fa arrow"></span>
+                </a>
+                <!--<ul class="nav nav-second-level" collapse="collapseVar!=6">
+                    <li ui-sref-active="active" ng-if="isValid(51)">
+                        <a ui-sref="dashboard.elearning">上稿管理3</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(52)">
+                        <a ui-sref="dashboard.edisplay">上稿管理3</a>
+                    </li>
+                </ul>-->
+                <!-- /.nav-second-level -->
+            </li>
+            <li ng-class="{active:collapseVar==10}" ng-if="isValid(60)">
+                <a href="" ng-click="check(10)">
+                    <i class="fa fa-empire fa-fw"></i> 上稿管理4<span class="fa arrow"></span>
+                </a>
+                <!--<ul class="nav nav-second-level" collapse="collapseVar!=10">
+                    <li ui-sref-active="active" ng-if="isValid(61)">
+                        <a ui-sref="dashboard.theme-collection">上稿管理4</a>
+                    </li>
+                </ul>-->
+                <!-- /.nav-second-level -->
+            </li>
+            <!--<li ng-class="{active:collapseVar==7}" ng-if="isValid(70)">
+                <a href="" ng-click="check(7)">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> 報表管理<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=7">
+                    <li ui-sref-active="active" ng-if="isValid(71)">
+                        <a ui-sref="dashboard.report_visit">網站流量統計</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(72)">
+                        <a ui-sref="dashboard.report_failure">失效連結統計</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(73)">
+                        <a ui-sref="dashboard.report_share">資源分享統計</a>
+                    </li>
+                </ul>
+            </li>-->
+            <!--<li ng-class="{active:collapseVar==8}" ng-if="isValid(80)">
+                <a href="" ng-click="check(8)">
+                    <i class="fa fa-history fa-fw"></i> 操作記錄<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=8">
+                    <li ui-sref-active="active" ng-if="isValid(81)">
+                        <a ui-sref="dashboard.backendlog">後台人員操作log</a>
+                    </li>
+                </ul>
+            </li>-->
+            <!--<li ng-class="{active:collapseVar==9}" ng-if="isValid(90)">
+                <a href="" ng-click="check(9)">
+                    <i class="fa fa-share-alt fa-fw"></i> 資源共享<span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=9">
+                    <li ui-sref-active="active" ng-if="isValid(91)">
+                        <a ui-sref="dashboard.import">匯入資源</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="isValid(92)">
+                        <a ui-sref="dashboard.export">匯出資源</a>
+                    </li>
+
+                </ul>
+            </li>-->
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div> 
+
+
+

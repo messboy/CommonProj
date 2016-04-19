@@ -1,0 +1,10 @@
+﻿<div class="col-sm-3">
+    <select class="form-control" ng-model="level1Value"
+            ng-options="m.key as m.value for m in level1" ng-change="myChange(level1Value);"></select>
+</div>
+<div class="col-sm-3">
+    <select class="form-control" ng-model="selectValue" 
+            ng-show="level2 != undefined"
+            ng-options="m.key as m.value for m in level2"></select>
+
+</div>

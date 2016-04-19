@@ -1,0 +1,272 @@
+﻿ 
+<div class="">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <!-- Title -->
+            <h3 ng-hide="s.isEdit" class="page-header">科普新知 新增</h3>
+            <h3 ng-show="s.isEdit" class="page-header">科普新知 編輯</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    必填表單
+                </div>
+                <div class="panel-body">
+                    <!-- /.row -->
+                    <form class="form-horizontal" role="form" name="form1">
+                        <div class="form-group"></div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>館所分類:</label>
+                            <div class="col-sm-9">
+                                <ddl-museums select-value="s.data.Museum"></ddl-museums>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>標題:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="title" ng-model="s.data.Title" required id="" placeholder="">
+                                <span ng-class="{'error-alert':isInvalid('title')}" ng-show="isInvalid('title')">
+                                    必填
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for="">描述:</label>
+                            <div class="col-sm-9">
+                                <textarea type="" class="form-control" cols="50" rows="5" name="description" ng-model="s.data.Description" id="" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2 " for="">關鍵字:</label>
+                            <div class="col-sm-9">
+                                <tags-input min-length="1"
+                                            max-length="40"
+                                            display-property="Name"
+                                            ng-model="s.data.Keyword">
+                                </tags-input>
+                            </div>
+                        </div>
+                        <div ng-repeat="item in s.data.Contribution track by $index">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="">
+                                    <button type="button" ng-show="$index == 0" class="btn btn-primary btn pull-left"
+                                            ng-click="s.data.Contribution.push({})">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                    <span class="red-color">*</span>貢獻者{{$index + 1}}:
+                                </label>
+
+
+                                 <div class="col-sm-4">
+                                     <ddl-role select-value="item.Role"></ddl-role>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="name{{$index}}" ng-model="item.Name" id="" required placeholder="姓名">
+                                    <span ng-class="{'error-alert':isInvalid('name{{$index}}')}" ng-show="isInvalid('name{{$index}}')">
+                                        必填
+                                    </span>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button type="button" ng-show="$index != 0 || s.data.Contribution.length > 1" class="btn btn-danger btn"
+                                            ng-click="s.data.Contribution.splice($index, 1)">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="unit{{$index}}" ng-model="item.Unit" id="" required placeholder="服務單位">
+                                    <span ng-class="{'error-alert':isInvalid('unit{{$index}}')}" ng-show="isInvalid('unit{{$index}}')">
+                                        必填
+                                    </span>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="email" class="form-control" name="email{{$index}}" ng-model="item.Email" required placeholder="Email">
+                                    <span ng-class="{'error-alert':isInvalid('email{{$index}}')}" ng-show="isInvalid('email{{$index}}')">
+                                        格式不正確
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>授權方式:</label>
+                            <div class="col-sm-9">
+                                <ddl-rights select-value="s.data.Rights"></ddl-rights>
+                            </div>
+                        </div>
+                        
+						<div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>使用語言:</label>
+                            <div class="col-sm-9">
+                                <ddl-language select-value="s.data.Language"></ddl-language>
+                            </div>
+                        </div>
+						
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>資源連結:</label>
+
+                            <div class="col-sm-9 radio">
+                                <label ng-repeat="type in s.resourceTypes">
+                                    <input type="radio" ng-model="s.data.hasResourceURL" ng-value="type.value" ng-change="s.resourceChange(type.value);" />{{type.key}} &emsp;
+                                </label>
+                                <br /><br />
+
+                                <div ng-if="s.data.hasResourceURL">
+                                    <input type="url" class="form-control" name="url" ng-model="s.data.ResourceLink" required id="" placeholder="">
+                                    <span ng-class="{'error-alert':isInvalid('url')}" ng-show="isInvalid('url')">
+                                        網址格式不正確
+                                    </span>
+                                </div>
+
+                                <div ng-if="!s.data.hasResourceURL">
+                                    <textarea ckeditor type="text" class="form-control" ng-model="s.data.Note" id="" placeholder=""></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+							<label class="control-label col-sm-2" for="">封面圖網址:</label>
+                            <div class="col-sm-9 radio">
+                                <label ng-repeat="type in s.imgTypes">
+                                    <input type="radio" ng-model="s.data.IsOuterCoverImage" ng-value="type.value" ng-change="s.radioChange(type.value);" />{{type.key}} &emsp;
+                                </label>
+                                <br />
+                                <br ng-if="s.data.IsOuterCoverImage" />
+                                <input type="url" class="form-control" name="coverimage" ng-model="s.data.CoverImage" id="" placeholder="" ng-if="s.data.IsOuterCoverImage">
+                                <span ng-class="{'error-alert':isInvalid('coverimage')}" ng-show="isInvalid('coverimage')" ng-if="s.data.IsOuterCoverImage">
+                                    網址格式不正確
+                                </span>
+
+                                <div ng-if="!s.data.IsOuterCoverImage">
+                                    <upload-img img-path="s.data.CoverImage"></upload-img>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" >
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>資源類型:</label>
+                            <div class="col-sm-3">
+                                <ddl-junior-resource-type select-value="s.data.ResourceType"></ddl-junior-resource-type>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>適用年級:</label>
+                            <div class="col-sm-9">
+                                <label ng-repeat="grade in s.grades">
+                                    <input type="checkbox" checklist-model="s.data.Grade" name="grade" checklist-value="grade"
+                                           ng-required="s.data.Grade == undefined || s.data.Grade.length == 0"> {{grade.GradeName}} &emsp;
+                                </label>
+                                <span ng-class="{'error-alert':isInvalid('grade')}" ng-show="isInvalid('grade')">
+                                    必填
+                                </span>
+                               
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>適用領域／議題(科目):</label>
+                            <div class="col-sm-9">
+                                <label ng-repeat="subject in s.subjects">
+                                    <input type="checkbox" checklist-model="s.data.Subject" name="subject" checklist-value="subject"
+                                           ng-required="s.data.Subject == undefined || s.data.Subject.length == 0"> {{subject.SubjectName}} &emsp;
+                                </label>
+                                <span ng-class="{'error-alert':isInvalid('subject')}" ng-show="isInvalid('subject')">
+                                    必填
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for=""><span class="red-color">*</span>是否啟用:</label>
+                            <div class="col-sm-9 radio" >
+                                <label>
+                                    <input type="radio" ng-model="s.data.IsPublish" ng-value='true'>
+                                    是
+                                </label>
+                                <label>
+                                    <input type="radio" ng-model="s.data.IsPublish" ng-value=false>
+                                    否
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5" ng-show="isDebug">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading=" + 偵錯模式" is-open="true" is-disabled="false">
+                    <div ng-repeat="(key, item) in s.data">
+                        <label>{{key}} :</label>
+                        <pre>{{item}}</pre>
+                    </div>
+                </uib-accordion-group>
+            </uib-accordion>
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading=" + 選填表單" is-open="false" is-disabled="false">
+                    <form class="form-horizontal" role="form">
+                         <div class="form-group">
+                            <label class="control-label col-sm-2" for="">互動形式:</label>
+                            <div class="col-sm-9">
+                                <ddl-interactivitytype select-value="s.data.InteractivityType"></ddl-interactivitytype>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="">適用對象:</label>
+                            <div class="col-sm-9">
+                                <ddl-intendedenduserrole select-value="s.data.IntendedEndUserRole"></ddl-intendedenduserrole>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="">教學時數(小時):</label>
+                            <div class="col-sm-9">
+                                <ddl-hour-min select-hour="s.data.LearnHour" select-min="s.data.LearnMin"></ddl-hour-min>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="">先備能力:</label>
+                            <div class="col-sm-9">
+                                <textarea type="text" cols="50" rows="3" class="form-control" ng-model="s.data.PreAbility" id="" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </uib-accordion-group>
+            </uib-accordion>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-lg-8">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading=" + 進階資訊內容(HTML)" is-open="false" is-disabled="false">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea ckeditor type="text" cols="50" rows="13" class="form-control" ng-model="s.data.Note" id="" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </uib-accordion-group>
+            </uib-accordion>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col-offset-5 col-md-7" style="text-align:center">
+            <button type="button" ng-click="s.addItem()" ng-hide="s.isEdit" class="btn btn-default">新增資料</button>
+            <button type="button" ng-click="s.updateItem()" ng-show="s.isEdit" class="btn btn-default">更新資料</button>
+            <a ui-sref="dashboard.science" class="btn btn-sm btn-default">
+                取消
+            </a>
+        </div>
+    </div>
+</div>

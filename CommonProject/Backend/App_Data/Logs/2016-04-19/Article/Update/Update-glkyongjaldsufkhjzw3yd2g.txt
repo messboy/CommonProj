@@ -1,0 +1,15 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-19 15:34:34.2650 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Article 
+ action：Update 
+ request：/Article/Update 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：型別 'Dao.Content' 的關聯中繼資料型別包含下列未知的屬性或欄位: Member。請確定這些成員的名稱與主要型別之屬性的名稱相符。 
+
+ ==================================================================================================== 
+             

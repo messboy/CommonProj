@@ -120,7 +120,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ID" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Content" Relationship="Self.KeyRel" FromRole="Keyword" ToRole="Content" />
   </EntityType>
@@ -209,5 +209,24 @@
       <End Role="Content" EntitySet="Content" />
       <End Role="Keyword" EntitySet="Keyword" />
     </AssociationSet>
+    <EntitySet Name="Backendlog" EntityType="CommonDBModel.Backendlog" />
   </EntityContainer>
+  <EntityType Name="Backendlog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Museum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Controller" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SessionId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RequestMethod" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Level" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoggerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

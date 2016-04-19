@@ -53,7 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminFilter.cs" />
+    <Compile Include="ArticleFilter.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Comparer\KeywordComparer.cs" />
+    <Compile Include="Comparer\KeywordHelper.cs" />
     <Compile Include="Comparer\MenuComparer.cs" />
     <Compile Include="Comparer\MenuHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

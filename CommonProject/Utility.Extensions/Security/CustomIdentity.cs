@@ -24,7 +24,6 @@ namespace Utility.Extensions.Security
         public string Email { get; set; }
 
         public int? Role { get; set; }
-        public string Museum { get; set; }  //所屬館所
         #endregion
 
         #region Implementation of IIdentity
@@ -73,7 +72,6 @@ namespace Utility.Extensions.Security
                 UserName = customMembershipUser.UserName;
                 Email = customMembershipUser.Email;
                 Role = customMembershipUser.Role;
-                Museum = customMembershipUser.Museum;
             }
         }
 

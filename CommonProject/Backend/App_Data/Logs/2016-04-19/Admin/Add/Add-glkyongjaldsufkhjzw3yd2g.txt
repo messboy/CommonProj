@@ -1,0 +1,15 @@
+ ==================================================================================================== 
+ 發生時間：2016-04-19 10:48:10.8741 
+ Log等級：DEBUG 
+ Logger：Utility.Extensions.ErrorHandler.ExceptionHandler 
+ Source：Utility.Logging.NLog.NLogLogger.Log 
+ controller：Admin 
+ action：Add 
+ request：/Admin/Add 
+ sessionid：glkyongjaldsufkhjzw3yd2g 
+ ip：::1 
+ method：POST 
+ 錯誤訊息：一個或多個實體的驗證失敗。如需詳細資料，請參閱 'EntityValidationErrors' 屬性。 
+
+ ==================================================================================================== 
+             

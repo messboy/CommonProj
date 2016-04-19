@@ -1,0 +1,24 @@
+﻿
+<div ng-repeat="f in fileuploads track by $index" ng-if="isUploaded || fileuploads">
+    <br />
+    <a href="Uploads/{{f.Path}}" target="_blank"><img ng-src="imgs/crop/70/70/{{f.Path}}" /></a> &emsp;
+    <a class="" ng-click="fileuploads.splice($index, 1)">移除</a>
+</div>
+<br />
+
+
+<button type="button" class="btn btn-default" ngf-select="showFiles(File)"
+        ng-model="File"
+        ngf-max-size="10MB"
+        multiple
+        accept="image/*">
+    選擇圖片
+</button>
+<button type="button" class="btn btn-primary" ng-click="uploadFiles(File)">
+    上傳圖片
+</button>
+<br />
+<div ng-repeat="file in Files">
+    <label>{{file.name}}</label>
+</div>
+<br /><br />

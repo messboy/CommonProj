@@ -41,6 +41,10 @@
 7.權限驗證
 	自訂權限驗證
 	修正webconfig使用自訂
+	<!--表單驗證-->
+    <authentication mode="Forms">
+      <forms loginUrl="~/Login/Login" timeout="2880" defaultUrl="~/Home/Index" slidingExpiration="true" name="PospAuth" />
+    </authentication>
 	<membership defaultProvider="CustomMembershipProvider">
       <providers>
         <clear />
@@ -50,4 +54,12 @@
 
 
 8.登入功能
-8.Admin CRUD功能
+
+9.自訂資料庫前攔截
+	public partial class CommonDBEntities : DbContext
+
+10.Admin CRUD功能
+
+11.上稿 CRUD功能 
+
+
